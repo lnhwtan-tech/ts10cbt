@@ -3,7 +3,7 @@ import { updateBreadcrumb, updateActiveNavItem, getSkeletonHtml, showToast } fro
 
 const pageInitializers = {};
 const templateCache = new Map();
-const BASE_PATH = window.location.hostname.endsWith('github.io') ? '/tuyen-sinh-10' : '';
+const BASE_PATH = window.location.hostname.endsWith('github.io') ? '/ts10cbt' : '';
 
 function stripBasePath(path) {
     if (BASE_PATH && path.startsWith(BASE_PATH)) path = path.slice(BASE_PATH.length);
