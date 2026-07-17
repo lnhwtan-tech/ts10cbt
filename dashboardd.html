@@ -1,0 +1,64 @@
+<div class="fade-in">
+    <h1 class="page-title">Tổng quan kỳ thi</h1>
+    <p class="page-subtitle">Hệ thống phân tích số liệu đăng ký và thông tin thi tuyển sinh lớp 10 chuyên.</p>
+
+    <div class="insight-grid" id="dashboard-insights"></div>
+
+    <div class="stats-grid">
+        <div class="stat-card" style="--card-accent: var(--accent-primary);">
+            <div class="stat-card-icon" style="background: var(--accent-muted); color: var(--accent-primary);"><i class="fas fa-user-graduate"></i></div>
+            <div class="stat-card-label">Tổng số thí sinh</div>
+            <div id="stat-total-students" class="stat-card-value">0</div>
+            <div class="stat-card-change">Đăng ký tham gia dự thi</div>
+        </div>
+        <div class="stat-card" style="--card-accent: var(--chart-2);">
+            <div class="stat-card-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--chart-2);"><i class="fas fa-book"></i></div>
+            <div class="stat-card-label">Số môn chuyên</div>
+            <div id="stat-total-subjects" class="stat-card-value">0</div>
+            <div class="stat-card-change">Môn thi tuyển sinh chuyên</div>
+        </div>
+        <div class="stat-card" style="--card-accent: var(--success);">
+            <div class="stat-card-icon" style="background: var(--success-muted); color: var(--success);"><i class="fas fa-school"></i></div>
+            <div class="stat-card-label">Số trường THCS</div>
+            <div id="stat-total-schools" class="stat-card-value">0</div>
+            <div class="stat-card-change">Trường có học sinh dự thi</div>
+        </div>
+        <div class="stat-card" style="--card-accent: var(--info);">
+            <div class="stat-card-icon" style="background: var(--info-muted); color: var(--info);"><i class="fas fa-door-closed"></i></div>
+            <div class="stat-card-label">Số phòng thi</div>
+            <div id="stat-total-rooms" class="stat-card-value">0</div>
+            <div class="stat-card-change">Phòng thi được phân bố</div>
+        </div>
+    </div>
+
+    <div class="chart-card full-width mb-4">
+        <div class="chart-header">
+            <span class="chart-title">Thống kê số lượng thí sinh theo môn chuyên</span>
+            <button class="chart-download" id="dl-dash-chart" title="Tải biểu đồ PNG"><i class="fas fa-download"></i></button>
+        </div>
+        <div class="chart-container" style="height: 320px;">
+            <canvas id="dashboard-overview-chart"></canvas>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="data-panel h-100">
+                <h3 class="section-title mb-3"><i class="fas fa-graduation-cap text-primary me-2"></i> Top 5 Trường đông nhất</h3>
+                <ul class="top-list" id="top-schools-list"></ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="data-panel h-100">
+                <h3 class="section-title mb-3"><i class="fas fa-door-open text-success me-2"></i> Top 5 Phòng thi đông nhất</h3>
+                <ul class="top-list" id="top-rooms-list"></ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+            <div class="data-panel h-100">
+                <h3 class="section-title mb-3"><i class="fas fa-scroll text-warning me-2"></i> Top 5 Môn ĐK nhiều nhất</h3>
+                <ul class="top-list" id="top-subjects-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>

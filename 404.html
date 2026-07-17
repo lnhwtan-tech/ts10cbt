@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0">
+    <title>Redirecting...</title>
+    <script>
+        (function () {
+            // Đường dẫn project trên GitHub Pages
+            const BASE_PATH = "/tuyen-sinh-10";
+
+            // Lưu URL gốc
+            sessionStorage.setItem(
+                "redirect",
+                location.pathname + location.search + location.hash
+            );
+
+            // Chuyển về index
+            location.replace(BASE_PATH + "/");
+        })();
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>

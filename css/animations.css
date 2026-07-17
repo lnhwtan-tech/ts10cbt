@@ -1,0 +1,52 @@
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.25); } 50% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+
+.fade-in { animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.page-enter { animation: fadeIn 0.25s ease both; }
+
+.content > .fade-in > .stats-grid .stat-card,
+.content > .fade-in > .data-panel,
+.content > .fade-in > .chart-card,
+.content > .fade-in > .charts-grid .chart-card { animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.content > .fade-in > .stats-grid .stat-card:nth-child(1) { animation-delay: 0.05s; }
+.content > .fade-in > .stats-grid .stat-card:nth-child(2) { animation-delay: 0.1s; }
+.content > .fade-in > .stats-grid .stat-card:nth-child(3) { animation-delay: 0.15s; }
+.content > .fade-in > .stats-grid .stat-card:nth-child(4) { animation-delay: 0.2s; }
+
+.subject-cards-grid .subject-card { animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.subject-cards-grid .subject-card:nth-child(1) { animation-delay: 0.03s; }
+.subject-cards-grid .subject-card:nth-child(2) { animation-delay: 0.06s; }
+.subject-cards-grid .subject-card:nth-child(3) { animation-delay: 0.09s; }
+.subject-cards-grid .subject-card:nth-child(4) { animation-delay: 0.12s; }
+.subject-cards-grid .subject-card:nth-child(5) { animation-delay: 0.15s; }
+.subject-cards-grid .subject-card:nth-child(6) { animation-delay: 0.18s; }
+.subject-cards-grid .subject-card:nth-child(7) { animation-delay: 0.21s; }
+.subject-cards-grid .subject-card:nth-child(8) { animation-delay: 0.24s; }
+.subject-cards-grid .subject-card:nth-child(9) { animation-delay: 0.27s; }
+
+.nav-item { transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
+.nav-item:hover { transform: translateX(2px); }
+.nav-item.active { animation: slideInLeft 0.3s ease both; }
+
+.stat-card { transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base); }
+.stat-card:hover { transform: translateY(-4px); }
+
+.student-count-badge { display: inline-flex; align-items: center; gap: var(--space-sm); padding: 10px 16px; border-radius: var(--radius-full); background: var(--accent-muted); color: var(--accent-primary); font-weight: 600; font-size: var(--font-size-sm); border: 1px solid rgba(59, 130, 246, 0.25); animation: pulseGlow 2.5s ease infinite; }
+
+.page-header-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-lg); flex-wrap: wrap; margin-bottom: var(--space-md); }
+.page-header-row .page-subtitle { margin-bottom: var(--space-lg); }
+
+.insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl); }
+.insight-chip { background: var(--bg-tertiary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); padding: var(--space-md); transition: border-color var(--transition-fast), transform var(--transition-fast); }
+.insight-chip:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.insight-chip-label { font-size: var(--font-size-xs); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--space-xs); }
+.insight-chip-value { font-size: var(--font-size-lg); font-weight: 700; color: var(--text-primary); }
+
+.skeleton { background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-hover) 50%, var(--bg-tertiary) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: var(--radius-sm); }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }

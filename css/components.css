@@ -1,0 +1,99 @@
+.stat-card, 
+.data-panel, 
+.subject-card, 
+.hero-section, 
+.room-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.stat-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform var(--transition-fast), background var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: scale(0.98);
+}
+
+table.dataTable {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+table.dataTable thead th {
+    background: transparent !important;
+    color: var(--text-tertiary) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px !important;
+}
+
+table.dataTable tbody td {
+    padding: 16px !important;
+    border-bottom: 1px solid var(--border-primary) !important;
+}
+
+.modal-content {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(30px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.subject-card {
+    padding: var(--space-lg);
+}
+
+.subject-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.room-card:hover {
+    background: var(--accent-muted);
+    border-color: var(--accent-primary);
+}
+
+.toast {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 12px 20px;
+}
